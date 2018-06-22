@@ -8,7 +8,7 @@ let todoList = []
 
 
 // Listeners
-invoerText.addEventListener('keypress', function(e) { e.keyCode === 13 && invoerText.value.length > 0 ? todoInvoeren() : doNothing()});
+invoerText.addEventListener('keypress', function(e) { e.keyCode === 13 && invoerText.value.length > 0 ? todoInvoeren() : {} });
 invoerButton.addEventListener('click', todoInvoeren);
 window.addEventListener('onload', init())
 
@@ -17,13 +17,11 @@ window.addEventListener('onload', init())
 // Load todo's from localstorage, convert to array, populate todolist when window opens
 function init() {
     open = JSON.parse(localStorage.getItem('myList'));
-    if (open) { todoList = open}
+    if (open) { todoList = open };
     
-    if (todoList) {
-        for (let i = 0; i < todoList.length; i++) {
-            let item = maakItem(todoList[i]);
-            list.appendChild(item)
-        }
+    for (let i = 0; i < todoList.length; i++) {
+        let item = maakItem(todoList[i]);
+        list.appendChild(item)
     }
 }
 
@@ -57,7 +55,7 @@ function todoInvoeren() {
     invoerText.value = '';
 }
 
-// Remove selected todo item. Remove it from the array and store this in localstorage
+// Remove selected todo item. Remove it from the array and store current array in localstorage
 function todoVerwijderen() {
     let index = todoList.indexOf(this.parentNode.firstChild.textContent);
     todoList.splice(index, 1);
