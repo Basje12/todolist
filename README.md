@@ -9,3 +9,5 @@ This todolist uses localstorage to remember your todolist. You can add an item, 
 
 ### Todo
 Using localstorage is done by adding or removing items from an array and updating the entire array in localStorage. Given the size this list is going to have, not really a big deal. But it seems inefficient. Have not yet found a way to do it better.
+
+-- Created as part of Udemy course "The Complete Web Developer in 2018: Zero to Mastery" by Andrea Neagoie
