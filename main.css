@@ -1,0 +1,66 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Nunito', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+#header {
+    background: linear-gradient(to bottom right, #33c960, #3194b0);
+    margin: 0px;
+    padding: 35px 0px;
+    width: 100%;    
+    display: block;
+    text-align:center;
+    font-family: 'Pacifico', cursive;
+    color: white;
+}
+
+#overzicht {
+    text-align: center;
+    list-style-position: inside;
+    line-height: 1.5rem;
+
+}
+
+#header h2 {
+    font-size: 3rem;
+}
+
+#todoInvoer {
+    line-height: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    padding-left: 3px;
+}
+
+#invoeren {
+    border-radius: 5px;
+    border: 1px solid black;
+    line-height: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: darkslategrey;
+    transition: 0.2s all;
+}
+
+#invoeren:hover {
+    background-color: rgb(62, 112, 112);
+}
+
+.remove-button {
+    border-radius: 5px;
+    margin-left: 5px;
+    border: 1px solid black;
+    background-color:white;
+    color: black;
+    font-weight:bold;
+    transition: 0.3s all;
+}
+
+.remove-button:hover {
+    background-color: lightcoral;
+}
