@@ -3,13 +3,13 @@ const list = document.querySelector('#ul-todo');
 const invoerText = document.querySelector('#todoInvoer');
 const invoerButton = document.querySelector('#invoeren');
 const removeButton = document.querySelectorAll('remove-button');
-let todoList = []
+let todoList = [];
 
 
 
 // Listeners
 invoerText.addEventListener('keypress', function(e) { e.keyCode === 13 && invoerText.value.length > 0 ? todoInvoeren() : {} });
-invoerButton.addEventListener('click', todoInvoeren);
+invoerButton.addEventListener('click', function() { invoerText.value.length > 0 ? todoInvoeren() : {} });
 window.addEventListener('onload', init())
 
 // Functions
